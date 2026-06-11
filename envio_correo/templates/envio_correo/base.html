@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header { background-color: #333; color: white; padding: 10px; }
+        nav { margin: 10px 0; }
+        nav a { margin-right: 15px; color: #333; text-decoration: none; }
+        main { margin: 20px 0; }
+        footer { background-color: #f0f0f0; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Bienvenido{% endblock %}</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+
+        <form>
+            <input type="text" placeholder="Destino">
+            <input type="text" placeholder="Mensaje...">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <a href="/about">Acerca de</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>

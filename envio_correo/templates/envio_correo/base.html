@@ -19,9 +19,11 @@
     <nav>
         <a href="/">Inicio</a>
 
-        <form>
-            <input type="text" placeholder="Destino">
-            <input type="text" placeholder="Mensaje...">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Destino" name="destino">
+            <input type="text" placeholder="Asunto..." name="asunto">
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
             <button type="submit">Enviar</button>
         </form>
 
